@@ -1,0 +1,23 @@
+<h1>Just a simple List to do</h1>
+
+<!--ul>
+    <li>temporary todolist item A</li>
+    <li>temporary todolist item B</li>
+</ul -->
+
+<ul>
+    {% for todolist_item in all_items%}
+     <li>{{todolist_item.content }}</li>
+     <form action="/deleteTodolist/{{todolist_item.id}}/"
+            style="display: inline;"
+
+            method="post">{% csrf_token %}
+
+        <input type="submit" value="Delete"/>
+        </form>
+    </li>
+    {% endfor %} 
+</ul>
+
+<form action="/addTodolist/" method="post">{% csrf_token %}
+<input type="text" name="content"/>
