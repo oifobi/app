@@ -1,0 +1,5 @@
+I would recommend in the bash scripts gennerate password for that application
+but in that case if you want reuse it you can write the password in the system
+but first time you have generate it.
+
+
